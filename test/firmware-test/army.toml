@@ -1,0 +1,27 @@
+[project]
+	name = "test-firmware-stream"
+	description = "Firmware test for stream library"
+	version = "1.0.0" 
+	
+	default-target = "board-samd21g18a"
+
+[plugin.gcc-arm-none-eabi]
+	version = "dev"
+[plugin.jlink]
+	version = "dev"
+	baud = "115200"
+[plugin.console]
+	version = "dev"
+
+[repo.stream]
+        uri = "../.."
+
+[target.board-samd21g18a]
+	arch = "samd21g18a"
+	include = "firmware/samd21g18a/board.cmake"
+	
+	dev-dependencies = [
+		"core-samd21g18a:dev",
+		"stream:dev"
+	]
+	
