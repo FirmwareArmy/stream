@@ -1,11 +1,9 @@
-[project]
-	type = "library"
-	name = "stream"
-	description = "Very light implementation for streams"
-	version = "1.0.0" 
+name = "stream"
+description = "Very light stream implementation without memory allocation"
+version = "1.0.0" 
 
-	[project.cmake]
-		include = "cmake/stream.cmake"
+[cmake]
+	include = "cmake/stream.cmake"
 
 [packaging]
 	include = [
