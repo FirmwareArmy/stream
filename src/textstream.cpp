@@ -85,6 +85,8 @@ TextStream& operator<<(TextStream& stream, uint32_t v)
 	return stream ;
 }
 
+#ifdef STREAM_SUPPORT_FLOAT
+
 float3p2_float_t float3p2(float v)
 {
 	return {v} ;
@@ -207,7 +209,7 @@ TextStream& operator<<(TextStream& stream, prefix_float_t v)
 	}
 	return stream ;
 }
-
+#endif
 
 bin8_uint32_t bin8(uint32_t v)
 {

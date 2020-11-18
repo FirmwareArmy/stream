@@ -23,6 +23,7 @@ TextStream& operator<<(TextStream& stream, const char*) ;
 TextStream& operator<<(TextStream& stream, int32_t) ;
 TextStream& operator<<(TextStream& stream, uint32_t) ;
 
+#ifdef STREAM_SUPPORT_FLOAT
 /**
  * Print a float -999.99 < val < 999.99
  */
@@ -37,6 +38,7 @@ TextStream& operator<<(TextStream& stream, float3p2_float_t) ;
 struct prefix_float_t { float v ; const char* unit ; } ;
 prefix_float_t prefix(float, const char* unit) ;
 TextStream& operator<<(TextStream& stream, prefix_float_t) ;
+#endif
 
 
 struct bin8_uint32_t { uint32_t v ; } ;
