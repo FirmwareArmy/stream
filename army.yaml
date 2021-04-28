@@ -1,0 +1,11 @@
+name: stream
+description: Very light stream implementation without memory allocation
+version: 1.0.0 
+
+definition:
+  cmake: cmake/stream.cmake
+
+packaging:
+  include:
+  - cmake
+  - src
